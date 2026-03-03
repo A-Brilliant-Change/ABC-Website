@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Blessed Church | A Brilliant Change Inc.</title>
+  <meta name="description" content="A Blessed Church" />
+  <link rel="canonical" href="https://www.abrilliantchange.org/a-blessed-church/" />
+  <meta name="robots" content="index,follow" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.abrilliantchange.org/a-blessed-church/" />
+  <meta property="og:title" content="A Blessed Church | A Brilliant Change Inc." />
+  <meta property="og:description" content="A Blessed Church" />
+  <meta property="og:image" content="https://www.abrilliantchange.org/assets/og-image.png" />
+  <meta property="og:image:alt" content="A Brilliant Change Inc. — building durable independence" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="A Blessed Church | A Brilliant Change Inc." />
+  <meta name="twitter:description" content="A Blessed Church" />
+  <meta name="twitter:image" content="https://www.abrilliantchange.org/assets/og-image.png" />
+  <meta name="theme-color" content="#000000" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; background-color: #000; color: #fff; overflow-x: hidden; }
+    h1, h2, h3, .font-outfit { font-family: 'Outfit', sans-serif; }
+    .bg-noise { position: fixed; inset: 0; z-index: 50; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E"); }
+    .editorial-line { position: fixed; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.05) 10%, rgba(255,255,255,0.05) 90%, transparent); z-index: 0; pointer-events: none; }
+    .bg-grid { position: fixed; inset: 0; z-index: 0; background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 50px 50px; mask-image: radial-gradient(circle at center, black 40%, transparent 80%); -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%); pointer-events: none; }
+    .glow-orb { position: absolute; border-radius: 50%; filter: blur(150px); z-index: 0; pointer-events: none; animation: drift 20s infinite alternate ease-in-out; }
+    .orb-1 { width: 60vw; height: 60vw; background: rgba(201,162,77,0.08); top: -20%; right: -20%; }
+    .orb-2 { width: 50vw; height: 50vw; background: rgba(26,26,26,0.8); bottom: 10%; left: -10%; }
+    @keyframes drift { 0% { transform: translate(0px, 0px) scale(1); } 100% { transform: translate(-50px, 80px) scale(1.1); } }
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .delay-100 { transition-delay: 100ms; } .delay-200 { transition-delay: 200ms; } .delay-300 { transition-delay: 300ms; }
+    .cards-container { display: grid; gap: 2rem; }
+    @media (min-width: 768px) { .cards-container { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .cards-container { grid-template-columns: repeat(3, 1fr); } }
+    .glow-card { background-color: rgba(26, 26, 26, 0.3); border-radius: 24px; position: relative; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); transition: transform 0.3s ease, border-color 0.3s ease; text-decoration: none; display: block; }
+    .glow-card:hover { transform: translateY(-5px); border-color: rgba(201, 162, 77, 0.3); }
+    .glow-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(201, 162, 77, 0.15), transparent 40%); z-index: 0; opacity: 0; transition: opacity 0.5s; }
+    .glow-card:hover::before { opacity: 1; }
+    .glow-card-content { position: relative; z-index: 1; padding: 2.5rem; height: 100%; display: flex; flex-direction: column; }
+    .text-gradient-gold { background: linear-gradient(135deg, #FFFFFF 0%, #C9A24D 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .text-gradient-gold-animated { background: linear-gradient(to right, #C9A24D 0%, #FFFFFF 50%, #C9A24D 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shine 5s linear infinite; }
+    @keyframes shine { to { background-position: 200% center; } }
+    #main-nav { transition: background-color 0.3s ease, padding 0.3s ease, border-color 0.3s ease; }
+    #main-nav.scrolled { background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-top: 1rem; padding-bottom: 1rem; }
+    :focus-visible { outline: 2px solid #C9A24D; outline-offset: 2px; }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      .parallax, .glow-orb { animation: none !important; }
+    }
+    .no-custom-cursor, .no-custom-cursor a, .no-custom-cursor button, .no-custom-cursor [role="button"] { cursor: auto !important; }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NonprofitOrganization","name":"A Brilliant Change Inc.","alternateName":"ABC Inc.","url":"https://www.abrilliantchange.org/","logo":"https://www.abrilliantchange.org/assets/logo-512.png","sameAs":[],"address":{"@type":"PostalAddress","addressLocality":"Tulsa","addressRegion":"OK","postalCode":"74114","streetAddress":"2325 S Harvard Ave, FL 6"},"email":"info@abrilliantchange.org","founder":{"@type":"Person","name":"James R. London"}}</script>
+</head>
+
+<body class="relative"><main class="min-h-screen flex items-center justify-center text-center p-12"><div><h1 class="text-4xl md:text-6xl font-outfit font-bold">A Blessed Church</h1><p class="mt-4 text-[#A0A0A0]">Coming soon.</p><p class="mt-2"><a href="/" class="underline text-[#C9A24D]">← Back to Home</a></p></div></main></body></html>
