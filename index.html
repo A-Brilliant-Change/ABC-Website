@@ -1,69 +1,750 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>A Brilliant Change Inc. | The Struggle's Long-Awaited Solution</title>
-  <meta name="description" content="A Brilliant Change Inc. is a Tulsa-based 501(c)(3) delivering practical support, skill-building, and systems that restore agency, dignity, and resilient independence." />
-  <link rel="canonical" href="https://www.abrilliantchange.org/" />
-  <meta name="robots" content="index,follow" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.abrilliantchange.org/" />
-  <meta property="og:title" content="A Brilliant Change Inc. | The Struggle's Long-Awaited Solution" />
-  <meta property="og:description" content="A Brilliant Change Inc. is a Tulsa-based 501(c)(3) delivering practical support, skill-building, and systems that restore agency, dignity, and resilient independence." />
-  <meta property="og:image" content="https://www.abrilliantchange.org/assets/og-image.png" />
-  <meta property="og:image:alt" content="A Brilliant Change Inc. — building durable independence" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="A Brilliant Change Inc. | The Struggle's Long-Awaited Solution" />
-  <meta name="twitter:description" content="A Brilliant Change Inc. is a Tulsa-based 501(c)(3) delivering practical support, skill-building, and systems that restore agency, dignity, and resilient independence." />
-  <meta name="twitter:image" content="https://www.abrilliantchange.org/assets/og-image.png" />
-  <meta name="theme-color" content="#000000" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600;700&display=swap');
-    body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; background-color: #000; color: #fff; overflow-x: hidden; }
-    h1, h2, h3, .font-outfit { font-family: 'Outfit', sans-serif; }
-    .bg-noise { position: fixed; inset: 0; z-index: 50; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E"); }
-    .editorial-line { position: fixed; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.05) 10%, rgba(255,255,255,0.05) 90%, transparent); z-index: 0; pointer-events: none; }
-    .bg-grid { position: fixed; inset: 0; z-index: 0; background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 50px 50px; mask-image: radial-gradient(circle at center, black 40%, transparent 80%); -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%); pointer-events: none; }
-    .glow-orb { position: absolute; border-radius: 50%; filter: blur(150px); z-index: 0; pointer-events: none; animation: drift 20s infinite alternate ease-in-out; }
-    .orb-1 { width: 60vw; height: 60vw; background: rgba(201,162,77,0.08); top: -20%; right: -20%; }
-    .orb-2 { width: 50vw; height: 50vw; background: rgba(26,26,26,0.8); bottom: 10%; left: -10%; }
-    @keyframes drift { 0% { transform: translate(0px, 0px) scale(1); } 100% { transform: translate(-50px, 80px) scale(1.1); } }
-    .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-    .delay-100 { transition-delay: 100ms; } .delay-200 { transition-delay: 200ms; } .delay-300 { transition-delay: 300ms; }
-    .cards-container { display: grid; gap: 2rem; }
-    @media (min-width: 768px) { .cards-container { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1024px) { .cards-container { grid-template-columns: repeat(3, 1fr); } }
-    .glow-card { background-color: rgba(26, 26, 26, 0.3); border-radius: 24px; position: relative; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); transition: transform 0.3s ease, border-color 0.3s ease; text-decoration: none; display: block; }
-    .glow-card:hover { transform: translateY(-5px); border-color: rgba(201, 162, 77, 0.3); }
-    .glow-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(201, 162, 77, 0.15), transparent 40%); z-index: 0; opacity: 0; transition: opacity 0.5s; }
-    .glow-card:hover::before { opacity: 1; }
-    .glow-card-content { position: relative; z-index: 1; padding: 2.5rem; height: 100%; display: flex; flex-direction: column; }
-    .text-gradient-gold { background: linear-gradient(135deg, #FFFFFF 0%, #C9A24D 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .text-gradient-gold-animated { background: linear-gradient(to right, #C9A24D 0%, #FFFFFF 50%, #C9A24D 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shine 5s linear infinite; }
-    @keyframes shine { to { background-position: 200% center; } }
-    #main-nav { transition: background-color 0.3s ease, padding 0.3s ease, border-color 0.3s ease; }
-    #main-nav.scrolled { background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-top: 1rem; padding-bottom: 1rem; }
-    :focus-visible { outline: 2px solid #C9A24D; outline-offset: 2px; }
-    @media (prefers-reduced-motion: reduce) {
-      * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
-      .parallax, .glow-orb { animation: none !important; }
-    }
-    .no-custom-cursor, .no-custom-cursor a, .no-custom-cursor button, .no-custom-cursor [role="button"] { cursor: auto !important; }
-  </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NonprofitOrganization","name":"A Brilliant Change Inc.","alternateName":"ABC Inc.","url":"https://www.abrilliantchange.org/","logo":"https://www.abrilliantchange.org/assets/logo-512.png","sameAs":[],"address":{"@type":"PostalAddress","addressLocality":"Tulsa","addressRegion":"OK","postalCode":"74114","streetAddress":"2325 S Harvard Ave, FL 6"},"email":"info@abrilliantchange.org","founder":{"@type":"Person","name":"James R. London"}}</script>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Brilliant Change Inc. | The Struggle's Long-Awaited Solution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600;700&display=swap');
+        
+        /* Base & Reset */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background-color: #000000;
+            color: #FFFFFF;
+            overflow-x: hidden;
+            cursor: none; /* Custom cursor */
+        }
 
-<body class="relative"><main class="min-h-screen flex items-center justify-center text-center p-12"><div><img src="/assets/logo-192.png" alt="ABC logo" class="mx-auto mb-6"/><h1 class="text-4xl md:text-6xl font-outfit font-bold">A Brilliant Change Inc.</h1><p class="mt-4 text-[#A0A0A0]">Fresh scaffold generated. Full landing content will be restored in the next commit.</p><div class="mt-8"><a href="https://buy.stripe.com/28E9AM2mAgjqer4eiz1Jm01?utm_source=website&utm_medium=hero&utm_campaign=donate_cta" class="btn-primary">Donate</a></div></div></main></body>
+        h1, h2, h3, .font-outfit { font-family: 'Outfit', sans-serif; }
+
+        /* Exquisite Details: Noise & Editorial Framing */
+        .bg-noise {
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+        }
+        .editorial-line {
+            position: fixed;
+            top: 0; bottom: 0;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.05) 10%, rgba(255,255,255,0.05) 90%, transparent);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Custom Cursor */
+        @media (pointer: fine) {
+            #cursor-dot, #cursor-outline {
+                position: fixed;
+                top: 0; left: 0;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                z-index: 9999;
+                pointer-events: none;
+            }
+            #cursor-dot {
+                width: 8px; height: 8px;
+                background-color: #C9A24D;
+            }
+            #cursor-outline {
+                width: 40px; height: 40px;
+                border: 1px solid rgba(201, 162, 77, 0.5);
+                transition: width 0.2s, height 0.2s, border-color 0.2s;
+            }
+            body:hover #cursor-outline { width: 50px; height: 50px; border-color: #C9A24D; }
+            
+            /* Hide default cursor on interactive elements but keep custom cursor logic */
+            a, button, [role="button"] { cursor: none; }
+        }
+
+        /* Ambient Backgrounds */
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+            pointer-events: none;
+        }
+
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(150px);
+            z-index: 0;
+            pointer-events: none;
+            animation: drift 20s infinite alternate ease-in-out;
+        }
+        .orb-1 { width: 60vw; height: 60vw; background: rgba(201, 162, 77, 0.08); top: -20%; right: -20%; }
+        .orb-2 { width: 50vw; height: 50vw; background: rgba(26, 26, 26, 0.8); bottom: 10%; left: -10%; }
+
+        @keyframes drift {
+            0% { transform: translate(0px, 0px) scale(1); }
+            100% { transform: translate(-50px, 80px) scale(1.1); }
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Proximity Glow Cards */
+        .cards-container {
+            display: grid;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) { .cards-container { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .cards-container { grid-template-columns: repeat(3, 1fr); } }
+        
+        .glow-card {
+            background-color: rgba(26, 26, 26, 0.3);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+        .glow-card:hover { 
+            transform: translateY(-5px); 
+            border-color: rgba(201, 162, 77, 0.3);
+        }
+        
+        .glow-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(
+                800px circle at var(--mouse-x, 0) var(--mouse-y, 0),
+                rgba(201, 162, 77, 0.15),
+                transparent 40%
+            );
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .glow-card:hover::before { opacity: 1; }
+        
+        .glow-card-content {
+            position: relative;
+            z-index: 1;
+            padding: 2.5rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Typography & Gradients */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #FFFFFF 0%, #C9A24D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-gold-animated {
+            background: linear-gradient(to right, #C9A24D 0%, #FFFFFF 50%, #C9A24D 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shine 5s linear infinite;
+        }
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        /* Premium Buttons & Magnetic Physics */
+        .magnetic-wrap {
+            display: inline-flex;
+            padding: 1.5rem;
+            margin: -1.5rem;
+        }
+        .magnetic {
+            transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+            will-change: transform;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #E6C27A 0%, #C9A24D 100%);
+            color: #000000;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            border-radius: 9999px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(201, 162, 77, 0.2);
+        }
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-primary:hover { transform: scale(1.05); }
+        .btn-primary:hover::after { left: 100%; }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #FFFFFF;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            padding: 1rem 2.5rem;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            border-color: #C9A24D;
+            background-color: rgba(201, 162, 77, 0.05);
+            color: #C9A24D;
+        }
+
+        /* Glassmorphism Nav */
+        #main-nav {
+            transition: background-color 0.3s ease, padding 0.3s ease, border-color 0.3s ease;
+        }
+        #main-nav.scrolled {
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="relative">
+
+    <div class="bg-noise"></div>
+    <div class="editorial-line left-4 md:left-12"></div>
+    <div class="editorial-line right-4 md:right-12"></div>
+
+    <div id="cursor-dot" class="hidden md:block" aria-hidden="true"></div>
+    <div id="cursor-outline" class="hidden md:block" aria-hidden="true"></div>
+
+    <div class="bg-grid parallax" data-speed="0.05"></div>
+    <div class="glow-orb orb-1 parallax" data-speed="-0.1"></div>
+    <div class="glow-orb orb-2 parallax" data-speed="0.1"></div>
+
+    <nav id="main-nav" class="fixed top-0 w-full z-[100] py-6 px-6 md:px-12 transition-all">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="font-outfit font-bold text-xl md:text-2xl tracking-wide z-50">
+                A Brilliant <span class="text-[#C9A24D]">Change</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#doctrine" class="text-sm uppercase tracking-widest text-[#A0A0A0] hover:text-white transition-colors">Manifesto</a>
+                <a href="#initiatives" class="text-sm uppercase tracking-widest text-[#A0A0A0] hover:text-white transition-colors">Initiatives</a>
+                <div class="magnetic-wrap" style="padding: 0; margin: 0;">
+                    <!-- DONATE (Header) -->
+                    <a 
+                      href="https://buy.stripe.com/28E9AM2mAgjqer4eiz1Jm01?utm_source=website&utm_medium=header&utm_campaign=donate_cta" 
+                      class="btn-primary text-xs py-3 px-6 magnetic"
+                      target="_blank" rel="noopener noreferrer"
+                      aria-label="Donate to A Brilliant Change"
+                    >Donate</a>
+                </div>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden z-50 text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
+            <a href="#doctrine" class="mobile-link text-2xl font-outfit uppercase tracking-widest text-white hover:text-[#C9A24D]">Manifesto</a>
+            <a href="#initiatives" class="mobile-link text-2xl font-outfit uppercase tracking-widest text-white hover:text-[#C9A24D]">Initiatives</a>
+            <!-- DONATE (Mobile Menu) -->
+            <a 
+              href="https://buy.stripe.com/28E9AM2mAgjqer4eiz1Jm01?utm_source=website&utm_medium=mobile_menu&utm_campaign=donate_cta" 
+              class="mobile-link btn-primary mt-4"
+              target="_blank" rel="noopener noreferrer"
+              aria-label="Donate to A Brilliant Change"
+            >Donate Today</a>
+        </div>
+    </nav>
+
+    <header class="min-h-screen flex flex-col justify-center px-6 py-20 pt-32 relative z-10">
+        <div class="max-w-5xl mx-auto w-full text-center md:text-left">
+            <h1 class="reveal text-5xl md:text-8xl font-bold leading-tight mb-8 tracking-tighter text-gradient-gold-animated">
+            From instability to sustainable forward motion. We deliver impact to those who need it most.
+            </h1>
+            
+            <p class="reveal delay-100 text-xl md:text-2xl font-light leading-relaxed mb-6 text-[#D1D1D1] max-w-3xl">
+                When they need it the most. No delays. No excuses. No misguidance. Bringing forth the change everyone has been waiting for… <b>A Brilliant Change!</b> Straight out of the 918. Like a boss.
+            </p>
+            <p class="reveal delay-200 text-lg md:text-xl font-light leading-relaxed mb-6 text-[#A0A0A0] max-w-3xl">
+                With accountability, resiliency, and transparency. Born out of the fire from a guy who was forced to sleep outside when a solution wasn't easily found. Now's the time for better days! Hopefully it can change a lot of lives in many ways. We leave no room to hide the growing demand and need for transparency.
+            </p>
+            <p class="reveal delay-300 text-lg md:text-xl font-light leading-relaxed mb-12 text-[#A0A0A0] max-w-3xl">
+                Did I mention that we have plans to break ground on the new and improved Tulsa Metro newspapers tossed on a doorstep near you, and printed locally? Yep. <b>The Tulsa Times!</b> Our ministry, A Brilliant Change helps communities and the people within them build independence through practical support, skill-building, and systems that restore agency, dignity, and resilience. Powered by the most elite tech stack seen among nonprofits today.
+            </p>
+
+            <div class="reveal delay-300 flex flex-col sm:flex-row items-center gap-12 sm:gap-8">
+                <div class="magnetic-wrap">
+                    <!-- DONATE (Hero) -->
+                    <a 
+                      href="https://buy.stripe.com/28E9AM2mAgjqer4eiz1Jm01?utm_source=website&utm_medium=hero&utm_campaign=donate_cta" 
+                      class="btn-primary magnetic"
+                      target="_blank" rel="noopener noreferrer"
+                      aria-label="Donate to A Brilliant Change"
+                    >Donate</a>
+                </div>
+                <div class="magnetic-wrap">
+                    <a href="#join" class="text-[#A0A0A0] hover:text-white transition-colors border-b border-[#C9A24D] pb-1 magnetic">Learn how to get involved</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 md:py-32 px-6 relative z-10">
+        <div class="reveal max-w-4xl mx-auto bg-[#1A1A1A]/40 backdrop-blur-xl border border-white/5 rounded-[2rem] p-10 md:p-16">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-[1px] w-12 bg-[#C9A24D]"></div>
+                <h2 class="text-sm uppercase tracking-widest font-semibold text-[#C9A24D]">Why We Exist</h2>
+            </div>
+            <p class="text-2xl md:text-4xl font-light leading-snug text-[#F2F2F2] mb-6">
+                Instability is not a character flaw; it is a systemic failure. Bottom line. We exist because band-aid fixes currently embraced are not enough. 
+            </p>
+            <p class="text-2xl md:text-4xl font-light leading-snug text-[#F2F2F2]">
+                Communities need clear pathways out of crisis and adaptive tools that build lasting independence while leaving behind legacies bold enough nobody can ignore. And all of mankind needs people that has their back proactively. We work endlessly to provide this, and then some, to ensure the most prosperous future possible for those we work with.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 px-6 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-sm uppercase tracking-widest font-semibold text-[#A0A0A0] mb-4">What We Do</h2>
+                <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent mx-auto"></div>
+            </div>
+            
+            <div class="cards-container">
+                <div class="reveal delay-100 glow-card">
+                    <div class="glow-card-content">
+                        <div class="w-12 h-12 rounded-full bg-black border border-[#C9A24D]/30 flex items-center justify-center mb-8">
+                            <span class="text-[#C9A24D] font-outfit font-bold">01</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-white font-outfit">Practical Support</h3>
+                        <p class="text-[#A0A0A0] font-light leading-relaxed">
+                            Meeting immediate, grounded needs so individuals have the baseline stability required to focus on their future rather than mere survival. This alone could save many years in the struggle, and lead to a higher number of people whose lives were truly changed.
+                        </p>
+                    </div>
+                </div>
+                <div class="reveal delay-200 glow-card">
+                    <div class="glow-card-content">
+                        <div class="w-12 h-12 rounded-full bg-black border border-[#C9A24D]/30 flex items-center justify-center mb-8">
+                            <span class="text-[#C9A24D] font-outfit font-bold">02</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-white font-outfit">Skill-Building</h3>
+                        <p class="text-[#A0A0A0] font-light leading-relaxed">
+                            Equipping people with actionable, evolving, sustainable capabilities that translate directly into real-world economic and personal independence. Not only are we teaching modern trades through workforce training programs we’ve planned, but we’ll offer placement too.
+                        </p>
+                    </div>
+                </div>
+                <div class="reveal delay-300 glow-card">
+                    <div class="glow-card-content">
+                        <div class="w-12 h-12 rounded-full bg-black border border-[#C9A24D]/30 flex items-center justify-center mb-8">
+                            <span class="text-[#C9A24D] font-outfit font-bold">03</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4 text-white font-outfit">Restore Agency</h3>
+                        <p class="text-[#A0A0A0] font-light leading-relaxed">
+                            Replacing cycles of dependency with robust frameworks that put control, decision-making, and power back into the hands of the people we serve. As well as in the hands of our team not only now, but in the future too. Think of it as ever-evolving change, manufactured.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 px-6 relative z-10">
+        <div class="reveal max-w-5xl mx-auto border-l-2 border-[#C9A24D] pl-8 md:pl-16">
+            <h2 class="text-sm uppercase tracking-widest font-semibold mb-8 text-[#A0A0A0]">Who We Serve</h2>
+            <p class="text-2xl md:text-3xl font-light leading-relaxed text-white">
+                We partner with communities and at-risk populations to wisely navigate the gap between survival and stability. Our work centers on those who possess the drive to move forward but lack the structural support and resources to make it sustainable. <span class="text-[#C9A24D] font-medium">We honor their lived experiences and respect their inherent dignity above all else.</span>
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 px-6 relative z-10">
+        <div class="reveal max-w-4xl mx-auto text-center bg-[#1A1A1A]/40 backdrop-blur-xl border border-white/5 rounded-[2rem] p-10 md:p-16">
+            <h2 class="text-sm uppercase tracking-widest font-semibold mb-8 text-[#A0A0A0]">What Makes Us Different</h2>
+            <p class="text-3xl md:text-5xl font-light leading-tight text-white font-outfit mb-8">
+                We reject performative charity in its entirety, unquestionably.
+            </p>
+            <p class="text-xl md:text-3xl font-light leading-tight text-[#D1D1D1] mb-6">
+                We do not measure success by how much we give away. We measure by how much <span class="text-gradient-gold font-bold">independence</span> we help create.
+            </p>
+            <p class="text-lg md:text-xl font-semibold tracking-widest uppercase text-[#C9A24D]">
+                We lead A Brilliant Change, nothing less.<br>
+                NO EXCEPTIONS. That’s the non-negotiable bottom line.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 px-6 relative z-10" id="doctrine">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="reveal text-sm uppercase tracking-widest font-semibold mb-12 text-[#A0A0A0] text-center">The Manifesto</h2>
+            
+            <div class="reveal delay-100 glow-card p-10 md:p-20 relative overflow-hidden group border-[#C9A24D]/20" style="text-decoration: none; cursor: none;">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.08),transparent_80%)] opacity-50 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                
+                <div class="relative z-10 space-y-16">
+                    
+                    <div class="text-center">
+                        <div class="h-[2px] w-16 bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent mx-auto mb-8"></div>
+                        <p class="text-3xl md:text-5xl font-light leading-snug text-white font-outfit tracking-tight">
+                            We believe real change is possible.<br>
+                            <span class="text-gradient-gold font-semibold">but it is never something that’s accidental.</span>
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-lg font-light text-[#D1D1D1] leading-relaxed">
+                        <div class="space-y-4">
+                            <p><span class="text-[#C9A24D] mr-2">♦</span> We believe people are not broken, sometimes we are at our lowest lows, unintentionally.</p>
+                            <p><span class="text-[#C9A24D] mr-2">♦</span> We believe communities are not hopeless. We see the energy within them daily.</p>
+                            <p><span class="text-[#C9A24D] mr-2">♦</span> We believe that most suffering isn't caused by lack of effort, but rather lack of access, opportunity, and systems that work without unnecessary headaches, stress, or work.</p>
+                            <p><span class="text-[#C9A24D] mr-2">♦</span> We reject the idea that charity alone is enough. Each mission shall be self-sustaining.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <p><span class="text-[#C9A24D] mr-2">♦</span> Relief matters — it shall not be diluted and must be the complete formula. Relief without direction traps people in place or could even send them wandering aimlessly with no true destination top of mind.</p>
+                            <p><span class="text-[#C9A24D] mr-2">♦</span> Help that removes agency isn't help. Just because programs may look good on the surface and appear to shine like a diamond doesn’t rule them out when it comes to being classified as a dud. If they fail, they fail. Bottom line.</p>
+                            <p><span class="text-[#C9A24D] mr-2">♦</span> We exist to build something better. Something that has not been done before. Truly lifechanging. Trendsetting?</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center py-10 border-y border-white/10">
+                        <p class="text-[#A0A0A0] max-w-3xl mx-auto text-lg">
+                            A Brilliant Change Inc. is committed to restoring forward motion — not through fancy marketing campaigns, shiny graphics, or slogans, but through practical support, skill-building, and ever-evolving systems that last and change as the times change, accordingly so.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 text-center text-xl md:text-2xl font-light text-[#F2F2F2] font-outfit">
+                        <p>We believe dignity is inherent, <span class="text-[#C9A24D]">not earned.</span></p>
+                        <p>We believe agency is essential, <span class="text-[#C9A24D]">not optional.</span></p>
+                        <p>We believe listening comes before solutions.</p>
+                        <p>We believe outcomes matter more than optics.</p>
+                    </div>
+
+                    <div class="bg-black/50 backdrop-blur-md p-8 rounded-2xl border border-white/5 text-center">
+                        <p class="text-[#A0A0A0] leading-relaxed mb-6 max-w-3xl mx-auto">
+                            Our work is grounded in real constraints, real lives, and real needs. We build programs people can grow within — not depend on until the funding dries up, leaving them in a bad spot yet again. We design pathways that lead to contribution, independence, resilience, and stability for the long haul.
+                        </p>
+                        <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-xs md:text-sm uppercase tracking-widest text-[#D1D1D1] font-semibold">
+                            <span><span class="text-red-500 mr-1">[X] NO</span> Performative Compassion</span>
+                            <span class="hidden md:inline text-[#C9A24D]">|</span>
+                            <span><span class="text-red-500 mr-1">[X] NO</span> Temporary Fixes</span>
+                            <span class="hidden md:inline text-[#C9A24D]">|</span>
+                            <span><span class="text-red-500 mr-1">[X] NO</span> Managing Decline</span>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-4">
+                        <p class="text-lg text-[#A0A0A0] mb-10 leading-relaxed max-w-2xl mx-auto">
+                            We’re here to build what’s missing and to present what’s been missing for as long as one can remember. To repair what’s broken. And help those we failed stand back up.<br><br>
+                            To create durable pathways forward, ones the world can count on —<br>
+                            <span class="text-white font-medium block mt-4 text-xl">1 Person. 1 System. 1 Community A Time.</span><br>
+                            Starting to feel what we’re made of?
+                        </p>
+                        
+                        <p class="text-xl md:text-2xl font-light text-white mb-8 max-w-3xl mx-auto">
+                            This work requires discipline. It requires humility. It requires excellence.<br>
+                            <span class="text-[#C9A24D] font-medium mt-4 block">And it requires the courage to do what TRULY works.</span><br>
+                            <span class="tracking-widest uppercase text-sm font-bold text-[#A0A0A0]">THE BREATHING, LIVING, ILLUSTRATIVE TRUTH. FOR THE WORLD TO SEE. UNCUT. IN REAL TIME.</span>
+                        </p>
+                        
+                        <div class="inline-block border border-[#C9A24D]/30 px-8 py-5 rounded-2xl bg-gradient-to-r from-transparent via-[#C9A24D]/10 to-transparent">
+                            <p class="text-2xl md:text-4xl font-bold font-outfit tracking-tight">
+                                This is not just a change.<br class="md:hidden"> 
+                                <span class="text-gradient-gold ml-2">This is A Brilliant Change.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 px-6 relative z-10 border-t border-white/5 bg-gradient-to-b from-transparent to-[#0A0A0A]" id="initiatives">
+        <div class="max-w-6xl mx-auto">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-sm uppercase tracking-widest font-semibold mb-4 text-[#C9A24D]">Our Initiatives</h2>
+                <div class="h-[1px] w-24 bg-gradient-to-r from-transparent via-[#C9A24D] to-transparent mx-auto mb-8"></div>
+                <p class="text-xl md:text-2xl font-light leading-relaxed text-[#F2F2F2] max-w-4xl mx-auto mb-6">
+                    We operate each branch of A Brilliant Change at the highest level of creativity, efficiency, and proactivity. We embrace a zero-tolerance policy for unnecessary delays.
+                </p>
+                <p class="text-[#A0A0A0] max-w-3xl mx-auto leading-relaxed">
+                    Through our expanding ministry efforts and operations, we are building the foundation of tomorrow.
+                </p>
+            </div>
+            
+            <div class="cards-container">
+                <a href="/a-blessed-church" class="reveal delay-100 glow-card group">
+                    <div class="glow-card-content">
+                        <h3 class="text-2xl font-semibold mb-3 text-white font-outfit group-hover:text-[#C9A24D] transition-colors">A Blessed Church</h3>
+                        <p class="text-[#A0A0A0] font-light text-sm mb-6 flex-grow">
+                            Our official church, grounding our mission in faith, unyielding community support, and spiritual resilience.
+                        </p>
+                        <div class="mt-auto flex items-center text-xs uppercase tracking-widest font-semibold text-white">
+                            Explore <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/a-brilliant-chef" class="reveal delay-200 glow-card group">
+                    <div class="glow-card-content">
+                        <h3 class="text-2xl font-semibold mb-3 text-white font-outfit group-hover:text-[#C9A24D] transition-colors">A Brilliant Chef</h3>
+                        <p class="text-[#A0A0A0] font-light text-sm mb-6 flex-grow">
+                            Our premier culinary arts placement and training program, serving up new opportunities and elite workforce readiness.
+                        </p>
+                        <div class="mt-auto flex items-center text-xs uppercase tracking-widest font-semibold text-white">
+                            Explore <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/a-better-choice" class="reveal delay-300 glow-card group">
+                    <div class="glow-card-content">
+                        <h3 class="text-2xl font-semibold mb-3 text-white font-outfit group-hover:text-[#C9A24D] transition-colors">A Better Choice</h3>
+                        <p class="text-[#A0A0A0] font-light text-sm mb-6 flex-grow">
+                            Emergency and transitional housing designed to provide a safe, dignified foundation for individuals rebuilding their lives.
+                        </p>
+                        <div class="mt-auto flex items-center text-xs uppercase tracking-widest font-semibold text-white">
+                            Explore <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/tulsa-times" class="reveal delay-100 glow-card group">
+                    <div class="glow-card-content">
+                        <h3 class="text-2xl font-semibold mb-3 text-white font-outfit group-hover:text-[#C9A24D] transition-colors">Tulsa Times</h3>
+                        <p class="text-[#A0A0A0] font-light text-sm mb-6 flex-grow">
+                            The new and improved Tulsa Metro newspaper. Printed locally, delivering honest journalism to a doorstep near you.
+                        </p>
+                        <div class="mt-auto flex items-center text-xs uppercase tracking-widest font-semibold text-white">
+                            Explore <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/free-tools" class="reveal delay-200 glow-card group">
+                    <div class="glow-card-content">
+                        <h3 class="text-2xl font-semibold mb-3 text-white font-outfit group-hover:text-[#C9A24D] transition-colors">Free Tools for Nonprofits</h3>
+                        <p class="text-[#A0A0A0] font-light text-sm mb-6 flex-grow">
+                            Empowering other organizations with the elite, professional-grade tech stack they need to succeed and scale their impact.
+                        </p>
+                        <div class="mt-auto flex items-center text-xs uppercase tracking-widest font-semibold text-white">
+                            Explore <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/abc-talent" class="reveal delay-300 glow-card group">
+                    <div class="glow-card-content">
+                        <h3 class="text-2xl font-semibold mb-3 text-white font-outfit group-hover:text-[#C9A24D] transition-colors">ABC Talent Solutions</h3>
+                        <p class="text-[#A0A0A0] font-light text-sm mb-6 flex-grow">
+                            Connecting skilled, determined, and ready-to-work individuals with forward-thinking employers.
+                        </p>
+                        <div class="mt-auto flex items-center text-xs uppercase tracking-widest font-semibold text-white">
+                            Explore <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 px-6 relative z-10" id="join">
+        <div class="reveal max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8 tracking-tight font-outfit">The Invitation</h2>
+            <p class="text-xl font-light leading-relaxed mb-12 max-w-2xl mx-auto text-[#A0A0A0]">
+                Real change requires commitment. It requires partners who understand that dignity and agency are the foundation of any lasting transformation. We invite you to be part of this work.
+            </p>
+            <a href="#join-movement" class="btn-secondary">Join the Movement</a>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 text-center relative z-10" id="donate">
+        <div class="reveal max-w-3xl mx-auto relative z-10 bg-[#1A1A1A]/80 backdrop-blur-2xl p-16 rounded-[3rem] border border-[#C9A24D]/30 shadow-[0_0_50px_rgba(201,162,77,0.1)]">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8 tracking-tight text-gradient-gold-animated font-outfit">Support Forward Motion.</h2>
+            <p class="text-xl font-light mb-12 text-[#D1D1D1]">
+                Your contribution builds the systems that make independence possible.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-12 sm:gap-8">
+                <div class="magnetic-wrap">
+                    <!-- DONATE (Donate Section) -->
+                    <a 
+                      href="https://buy.stripe.com/28E9AM2mAgjqer4eiz1Jm01?utm_source=website&utm_medium=donate_section&utm_campaign=donate_cta" 
+                      class="btn-primary magnetic"
+                      target="_blank" rel="noopener noreferrer"
+                      aria-label="Donate to A Brilliant Change"
+                    >Donate Today</a>
+                </div>
+                <div class="magnetic-wrap">
+                    <a href="#get-involved" class="text-[#A0A0A0] hover:text-[#C9A24D] uppercase tracking-widest text-sm font-semibold transition-colors magnetic">Get Involved</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-white/5 relative z-10 bg-[#000000]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+            <div class="text-center md:text-left">
+                <span class="font-semibold text-white font-outfit text-lg tracking-wide">A Brilliant Change Inc.</span> &copy; 2025-2026<br>
+                <span class="font-light text-[#A0A0A0] mt-1 block">An Oklahoma 501(c)(3) Non-Profit Corporation – All Rights Reserved.</span>
+            </div>
+            <div class="flex gap-8 font-light text-[#A0A0A0]">
+                <a href="#privacy" class="hover:text-[#C9A24D] transition-colors">Privacy</a>
+                <a href="#terms" class="hover:text-[#C9A24D] transition-colors">Terms</a>
+                <a href="#contact" class="hover:text-[#C9A24D] transition-colors">Contact</a>
+                <!-- DONATE (Footer Link) -->
+                <a 
+                  href="https://buy.stripe.com/28E9AM2mAgjqer4eiz1Jm01?utm_source=website&utm_medium=footer&utm_campaign=donate_cta"
+                  class="hover:text-[#C9A24D] transition-colors"
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label="Donate to A Brilliant Change"
+                >Donate</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar Scroll Effect
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenuBtn.innerHTML = `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            } else {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                mobileMenuBtn.innerHTML = `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>`;
+                document.body.style.overflow = '';
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // Custom Cursor Logic
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorOutline = document.getElementById('cursor-outline');
+        
+        window.addEventListener('mousemove', function(e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            
+            if(cursorDot) {
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+            }
+            if(cursorOutline) {
+                cursorOutline.animate({
+                    left: `${posX}px`,
+                    top: `${posY}px`
+                }, { duration: 150, fill: "forwards" });
+            }
+        });
+
+        // Proximity Glow Cards Logic
+        document.querySelectorAll('.glow-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Scroll Reveal Observer
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Magnetic Buttons Logic
+        const magnets = document.querySelectorAll('.magnetic');
+        magnets.forEach(magnet => {
+            const wrap = magnet.closest('.magnetic-wrap');
+            wrap.addEventListener('mousemove', (e) => {
+                const rect = wrap.getBoundingClientRect();
+                const x = (e.clientX - rect.left - rect.width / 2) * 0.3;
+                const y = (e.clientY - rect.top - rect.height / 2) * 0.3;
+                magnet.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+            });
+            wrap.addEventListener('mouseleave', () => {
+                magnet.style.transform = `translate(0px, 0px) scale(1)`;
+            });
+        });
+
+        // Parallax Ambient Backgrounds
+        const parallaxElements = document.querySelectorAll('.parallax');
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            parallaxElements.forEach(el => {
+                const speed = el.getAttribute('data-speed');
+                el.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+    </script>
+</body>
 </html>
